@@ -82,7 +82,7 @@ async def schedule_all_reminders(bot: Bot):
     now = datetime.now()
 
     for task in tasks:
-        task_type_text = "выступление" if task.task_type == "выступление" else "перевод"
+        task_type_text = "выступление" if task.task_type == "выступление" else "задание"
 
         due_str = task.due_date.strftime('%d.%m.%Y')
         late_text = f"🔔 У тебя предстоит {task_type_text}:\n{task.description}\nДата: {due_str}"
