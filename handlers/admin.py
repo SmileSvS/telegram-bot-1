@@ -34,7 +34,7 @@ async def cmd_upload_translation(message: Message, state: FSMContext):
     if message.from_user.id not in ADMIN_IDS:
         await message.answer("⛔ Только админ может загружать файлы")
         return
-    await state.update_data(task_type="задание")
+    await state.update_data(task_type="перевод")
     await state.set_state(UploadState.waiting_for_file)
     await message.answer("📤 Отправь мне файл Excel с **переводами**")
 
